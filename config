@@ -1,0 +1,7 @@
+firstName=""
+lastName=""
+password="yourPassword"
+issuer="MDVDMZJUMPL01.cpp.nonlive"
+account=$firstName.$lastName@$issuer 
+key="authenticatorSecretKey" 
+
