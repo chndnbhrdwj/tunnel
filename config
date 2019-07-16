@@ -1,7 +1,10 @@
-firstName=""
-lastName=""
-password="yourPassword"
+firstName="chandan"
+lastName="kumar"
+password=`security -q find-generic-password -s myPassword -w`
 issuer="MDVDMZJUMPL01.cpp.nonlive"
 account=$firstName.$lastName@$issuer 
-key="authenticatorSecretKey" 
+key="J4VA2444XLONVZM43AKJUO2QAA" 
+code=`authenticator --account $account --key $key --issuer $issuer | grep 'Token' | cut -d':' -f2`
+
+
 

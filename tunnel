@@ -1,10 +1,12 @@
 #!/usr/bin/expect -f
 
 set timeout 30;
-set password [lindex $argv 1] 
-set code [lindex $argv 0]
 
-spawn ssh -L8080:localhost:8080 steccm10actap01.cpp.nonlive
+set code [lindex $argv 0]
+set password [lindex $argv 1] 
+set command [lrange $argv 2 end] 
+
+eval spawn $command
 
 expect "Enter passphrase*"
 
@@ -27,5 +29,3 @@ expect ".cpp.nonlive's password*"
 send -- "$password\r"
 
 interact
- 
- 
