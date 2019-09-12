@@ -1,6 +1,7 @@
 firstName="chandan"
 lastName="kumar"
 password=`security -q find-generic-password -s myPassword -w`
+azurePassword=`security -q find-generic-password -s azurePassword -w`
 issuer="MDVDMZJUMPL01.cpp.nonlive"
 account=$firstName.$lastName@$issuer 
 key="J4VA2444XLONVZM43AKJUO2QAA" 

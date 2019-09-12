@@ -28,4 +28,4 @@ server="STECCMSLAVE01.cpp.nonlive"
 command="ssh -C -D $port $server";
 fi
 
-./tunnel $code $password $command
+./tunnel $code $password $azurePassword $command

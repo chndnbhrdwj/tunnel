@@ -4,7 +4,8 @@ set timeout 30;
 
 set code [lindex $argv 0]
 set password [lindex $argv 1] 
-set command [lrange $argv 2 end] 
+set azurePassword [lindex $argv 2] 
+set command [lrange $argv 3 end] 
 
 eval spawn $command
 
@@ -18,14 +19,14 @@ send -- "$code\r"
 
 expect ".cpp.nonlive's password*"
 
-send -- "$password\r"
+send -- "$azurePassword\r"
  
 expect ".cpp.nonlive's password*"
 
-send -- "$password\r"
+send -- "$azurePassword\r"
  
 expect ".cpp.nonlive's password*"
 
-send -- "$password\r"
+send -- "$azurePassword\r"
 
 interact
